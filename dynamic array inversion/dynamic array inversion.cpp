@@ -57,7 +57,7 @@ public:
 
     bool remove(int position) {
         if (position >= size || position < 0) { //Si la posición está fuera de los límites (mayor o igual a size o menor que 0) 
-            cout << "Posicio inexistent"; //muestra un mensaje de error ("Posición inexistente")
+            cout << "Posicio inexistent: "; //muestra un mensaje de error ("Posición inexistente")
             return false; //devuelve false indicando que la eliminación no fue exitosa.
         }
         string* newArray = new string[capacity]; //Se crea un nuevo arreglo newArray que tendrá la misma capacidad que el arreglo original array
