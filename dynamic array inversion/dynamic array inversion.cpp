@@ -79,6 +79,14 @@ public:
         }
         cout << endl;
     }
+ void inverse() {
+     // for (int i = 0; i < size / 2; i++) {//recorer hasta la mitad de la array
+         string aux = array[i];//guardar la array en un espacio temporal
+         array[i] = array[size - 1 - i];//hacer el cambio, el primer elemento pasa a ser  el ultimo
+         array[size - 1 - i] = aux;//el ultimo pasa a ser el auxiliar(el primero)
+     }
+     }
+ 
 };
 
 int main() {
@@ -92,4 +100,13 @@ int main() {
     a.print();
     a.remove(-10); //Intento de eliminación con una posición no válida (-10), (fuera del rango del arreglo), el método mostrará el mensaje "Posicio inexistent" y no realizará ninguna eliminación.
     a.print();
+    cout<<endl;
+   cout << "Array before inversion:" << endl;
+    a.print();
+
+    a.inverse();
+
+    cout << "Array after inversion:" << endl;
+    a.print();
+
 }
